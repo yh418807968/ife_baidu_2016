@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+li{
+	/*width:50px;*/
+	height:50px;
+	background:red;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	line-height:50px;
+	float:left;
+	margin:10px;}
+
+</style>
+</head>
+
+<body>
+<label>Tag:</label>
+<input id="input"></input>
+<ul id="list"></ul>
+<script>
+var oul=document.getElementById("list");
+var inputBox=document.getElementById("input");
+var text="";//列表中的内容
+function fnInput(){
+	if(keyCode==8||keyCode==188||keyCode==13){
+	var data=document.getElementById("input").value.trim();	
+	text+="<li>"+data+"</li>";
+	oul.innerHTML=text;
+	document.getElementById("input").value="";
+		}
+	}
+	
+function init(){
+	inputBox.keyup=fnInput;
+	
+	}
+init();
+
+</script>
+</body>
+</html>

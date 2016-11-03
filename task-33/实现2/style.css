@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+.container {
+    position:relative;
+}
+.background > tbody {
+    position:absolute;
+    top:0;
+    left:0;
+}
+.background td{
+    width:50px;
+    height:50px;
+    border-right:1px solid #aaa;
+    border-bottom:1px solid #aaa;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+.background td:first-child {
+    border-right:2px solid #333;
+    border-bottom:0;
+}
+.background td:last-child {
+    border-right:2px solid #333;
+}
+.background tr:first-child td {
+    border-right:0;
+    border-bottom:2px solid #333;
+}
+.background tr:last-child td {
+    border-bottom:2px solid #333;
+}
+.background tr:first-child td:first-child {
+    border-bottom:0;
+}
+.background tr:last-child td:first-child {
+    border-bottom:0;
+}
+.square {
+    position:absolute;
+    top:300px;
+    left:300px;
+    width:50px;
+    height:50px;
+    background-color:#f00;
+    transition:0.3s;
+    -webkit-transition:0.3s;
+}
+.square-face {
+    position:absolute;
+    top:0;
+    left:0;
+    width:50px;
+    height:15px;
+    background-color:#00f;
+}
+.control {
+    margin-top:15px;
+    margin-left:45px;
+}
+.control input {
+    margin:5px;
+}

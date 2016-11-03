@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+ button{
+	 display:inline-block;
+	 width:80px;
+	 height:40px;}
+li{
+	/*width:50px;*/
+	height:50px;
+	background:red;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	line-height:50px;
+	float:left;
+	margin:10px;}
+span{
+	background:blue;}
+</style>
+</head>
+
+<body>
+<textarea rows="5" cols="15" id="num-input" ></textarea>
+<button type="button" id="leftIn">左侧入</button>
+<button type="button" id="leftOut">左侧出</button>&nbsp;&nbsp;&nbsp;
+<button type="button" id="rightIn">右侧入</button>
+<button type="button" id="rightOut">右侧出</button>&nbsp;&nbsp;&nbsp;
+<button type="button" id="search">查询</button>
+<input type="text" id="searchText"></input>
+<ul id="list">
+</ul>
+<script>
+var oul=document.getElementById("list");
+
+function fnleftIn(){
+	var data=document.getElementById("num-input").value;
+	var dataSep=data.match(/[\u4E00-\u9FA5A-Za-z0-9]+/g);
+	var text="";
+	for(var i=0;i<dataSep.length;i++){
+	text+="<li>"+dataSep[i]+"</li>";
+		}
+	oul.innerHTML=text+oul.innerHTML;
+	//if((/^[0-9]+$/).test(num)){
+//	var oli=document.createElement("li");
+//	var oul=document.getElementById("list");
+//	oul.insertBefore(oli,oul.firstChild);
+//	oli.innerHTML=num;
+//	}else{
+//		alert("请输入数字字符！");
+//		
+//}
+}
+
+function fnleftOut(){
+	var oul=document.getElementById("list");
+	if(oul.childNodes.length==1){
+		alert("队列为空！");
+		}else{
+	oul.removeChild(oul.firstChild);
+		}
+}
+function fnrightIn(){
+	var data=document.getElementById("num-input").value;
+	var dataSep=data.match(/[\u4E00-\u9FA5A-Za-z0-9]+/g);
+	var text="";
+	for(var i=0;i<dataSep.length;i++){
+	text+="<li>"+dataSep[i]+"</li>";
+		}
+	oul.innerHTML=oul.innerHTML+text;
+}
+
+function fnrightOut(){
+	var oul=document.getElementById("list");
+	if(oul.childNodes.length==1){
+		alert("队列为空！");
+		}else{
+	oul.removeChild(oul.lastChild);
+		}
+}
+
+function fnSearch(){
+	var liList=document.getElementsByTagName("li");
+	var searchText=document.getElementById("searchText").value;
+	var count=0;
+	for(var i=0;i<liList.length;i++){
+		var data=liList[i].innerHTML;
+		if(data.match(searchText)){
+			count++;
+			var d=liList[i].innerHTML;
+			//liList[i].style.backgroundColor="blue";
+			d=d.replace(new RegExp(searchText, "g"),"<span>"+searchText+"</span>");
+			liList[i].innerHTML=d;
+		}
+	}
+	if(count==0){alert("队列中不存在此数据");}
+}
+
+function init(){
+	var btns=document.getElementsByTagName("button");
+	var leftIn=btns[0];
+	var leftOut=btns[1];
+	var rightIn=btns[2];
+	var rightOut=btns[3];
+	var searchBtn=btns[4];
+	
+	//var leftIn=document.getElementById("leftIn");
+	leftIn.onclick=fnleftIn;	
+	//var leftOut=document.getElementById("leftOut");
+	leftOut.onclick=fnleftOut;	
+	//var rightIn=document.getElementById("rightIn");
+	rightIn.onclick=fnrightIn;	
+	//var rightOut=document.getElementById("rightOut");
+	rightOut.onclick=fnrightOut;
+	searchBtn.onclick=fnSearch;	
+	}
+    
+	
+
+	
+init();
+</script>
+</body>
+</html>

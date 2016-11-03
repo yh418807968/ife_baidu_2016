@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;
+padding:0px;
+}
+
+/*背景*/
+#background{
+	width:550px;
+	height:550px;
+    position:relative;
+	}
+tbody td{
+	box-sizing:border-box;
+	width:50px;
+	height:50px;
+	border-bottom:1px #999 solid;
+	border-right:1px #999 solid;
+	/*border:1px #999 solid;*/
+	text-align:center;
+	}
+tbody td:first-child{
+	border-right:2px solid #333;
+    border-bottom:0;
+	}
+tbody td:last-child{
+	border-right:2px solid #333;
+	}
+tbody tr:first-child td{
+	border-bottom:2px solid #333;
+    border-right:0;
+	}
+tbody tr:last-child td{
+	border-bottom:2px solid #333;
+	}
+tbody tr:first-child td:first-child {
+    border-bottom:0;
+}
+tbody tr:last-child td:first-child {
+    border-bottom:0;
+}
+/*移动方块*/
+#square{
+	width:50px;
+	height:50px;
+	background:red;
+	position:absolute;
+	top:250px;
+	left:250px;
+	}
+#square-half{
+	width:50px;
+	height:30%;
+	background:blue;
+
+	}

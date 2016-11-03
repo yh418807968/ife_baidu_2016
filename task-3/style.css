@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+body,div{margin:0;padding:0;
+         }
+#main,#left,#middle,#right {
+	border:1px solid #999;}
+body{
+	font-size:18px;
+	font-family:"微软雅黑";
+	line-height:2;}
+#main{
+	background:#eee;
+	margin:20px;
+	padding:20px;
+	}
+#left{
+	width:160px;
+	height:80px;
+	float:left;
+	background:white;
+	padding:20px;}
+	#left .logo{
+		float:left;
+		margin-right:20px;
+		border:1px solid #999;
+		}
+#right{
+	width:100px;
+	height:400px;
+	padding:10px;
+    float:right;
+	background:white;}
+	#right .pic{
+		padding:0;
+		margin:10px;
+		border:1px solid #999;}
+#middle{
+	margin:0 140px 0 220px;
+	padding:20px;
+	background:white;}
+.clear{clear:both;}
+

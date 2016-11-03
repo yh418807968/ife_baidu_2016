@@ -1,0 +1,83 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+div,label,input,p,button{
+	
+	margin:0;
+	paading:0;
+	font-size:24px;
+	font-family:"微软雅黑";}
+#container{
+	margin:200px auto;
+	width:800px;
+	}
+div {
+	
+	margin:20px auto;
+	width:600px;}
+label{
+	display:inline-block;
+	width:20%;
+	text-align:right;
+	margin-right:10px;}
+p{
+	text-indent:22%;
+	font-size:15px;
+	color:#666;
+	opacity:0;}
+input{
+	width:60%;
+	border:2px #999 solid;
+	border-radius:10px;}
+button{
+	width:100px;
+	height:50px;
+	margin-top:10px;
+	margin-left:400px;
+	background:#6CF;
+	border-radius:10px;}
+input,button:focus{
+	outline:0;}
+</style>
+</head>
+
+<body>
+<div id="container">
+    <div>
+        <label>名称</label>
+        <input type="text" name="name"/>
+        <p>必填，长度为4-16个字符</p>
+    </div>
+    
+    <div>
+        <label>密码</label>
+        <input type="password" name="psw1" id="psw1"/>
+        <p>必填，6到16位数字和字母</p>
+    </div>
+    
+     <div>
+        <label>密码确认</label>
+        <input type="password" name="psw2" />
+        <p>必填，必须与密码相同</p>
+    </div>
+    
+     <div>
+        <label>邮箱</label>
+        <input type="text" name="email"/>
+        <p>必填，正确的邮箱格式</p>
+    </div>
+    
+     <div>
+        <label>电话</label>
+        <input type="text" name="phone"/>
+        <p>请输入手机号码或固定电话</p>
+    </div>
+<button id="btn">提交</button>
+</div>
+<script src="js.js"></script>
+</body>
+</html>
