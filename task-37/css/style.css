@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	font-size:24px;
+	font-family: '微软雅黑';
+	}
+body{
+	text-align:center;
+	 height: 1200px;
+	 }
+#login{
+	width:100px;
+	height:50px;
+	background:#26B9FF;
+	border-radius:10px;
+	color:#fff;
+	margin-top:100px;
+	outline:none;
+	}
+#mask{
+	width:100%;
+	height:100%;
+	position: fixed;
+	background:#666;
+	opacity:.5;
+	z-index:999;
+	display:none;
+	}
+#divFloat{
+	width:300px;
+	height:150px;
+	border:2px #999 solid;
+	border-radius:20px;
+	padding:30px 10px;
+	z-index:1000;
+    position:fixed;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-75px;
+	display:none;
+	background:#CCC;
+	 cursor:move;
+	}
+#divFloat p{
+	font-size:30px;
+	text-indent:1em;
+	line-height:50px;
+	}
+#divFloat button{
+	font-size:15px;
+	width:60px;
+	height:30px;
+	border-radius:5px;
+	margin: 20px;
+	cursor:pointer;
+	}
+#btnSure{
+	background:#0C9;
+	}
+#btnCancel{
+	background:#F69;}
